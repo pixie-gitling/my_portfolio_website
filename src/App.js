@@ -42,7 +42,7 @@ function App() {
 
         <section id="main" className="container">
           <Routes>
-            <Route path="/" element={<Summary />} />
+            <Route path="/summary" element={<Summary />} />
             <Route path="/experience" element={<Experience />} />
             <Route path="/projects" element={<Projects />} />
             <Route path="/education" element={<Education />} />
