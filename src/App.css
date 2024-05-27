@@ -85,7 +85,7 @@ header nav ul li a {
   color: var(--background-color);
   text-decoration: none;
   text-transform: uppercase;
-  text-shadow: 1px 4px 4px #07070763;
+  text-shadow: 1px 4px 4px #ffffff63;
   font-size: 1rem;
 }
 

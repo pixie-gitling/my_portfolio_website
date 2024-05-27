@@ -26,7 +26,7 @@ const ScrollToTop = () => {
 function App() {
   return (
     <Router>
-      <div className="App ">
+      <div className="App playfair-display-App">
         <ScrollToTop />
         <header>
           <div className="container">
