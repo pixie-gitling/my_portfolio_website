@@ -1,7 +1,7 @@
 {
   "name": "portfolio",
   "version": "0.1.0",
-  "homepage": "https://pixie-gitling.github.io/my_portfolio_website/summary",
+  "homepage": "https://pixie-gitling.github.io/my_portfolio_website",
   "private": true,
   "dependencies": {
     "@fortawesome/fontawesome-svg-core": "^6.5.2",
