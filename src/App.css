@@ -1,38 +1,164 @@
-.App {
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  line-height: 1;
+  margin: 0;
+  padding: 0;
+  background-color: #FFFFF0; 
+  color: #333;
+}
+
+:root {
+  --heading-color: #0D0D0D;
+  --background-color: #FFFFF0;
+  --text-color: #333333;
+  --accent-color: #D4AF37;
+  --accent-color1: #50C878;
+  --accent-color2: #6A5ACD;
+  --accent-color3: #800020;
+}
+
+.flex{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.container {
+  width: 80%;
+  margin: auto;
+  overflow: hidden;
+}
+
+header {
+  background: var(--text-color);
+  color: var(--background-color);
+  min-height: 70px;
+  box-shadow: 1px 4px 4px #07070763;
+  position: relative;
+}
+
+header #branding {
+  float: left;
+  /* background: #004080; Darker blue */
+  padding: 10px;
+  color: #fff;
+}
+
+header #branding h1 {
+  margin: 0 10px;
+  font-size: 2rem;
+  text-shadow: 1px 4px 4px #07070763;;
+}
+
+header #branding p {
+  margin: 0 2px;
+  font-size: 1.2rem;
+  color: var(--accent-color);
+  /* text-shadow: 1px 4px 4px #07070763;; */
+}
+
+header nav {
+  float: right;
+  margin-top: 10px;
+}
+
+header nav ul {
+  padding: 0;
+  list-style: none;
+}
+
+header nav ul li {
+  float: left;
+  padding: 0 15px;
+}
+
+header nav ul li a {
+  color: var(--background-color);
+  text-decoration: none;
+  text-transform: uppercase;
+  text-shadow: 1px 4px 4px #07070763;
+  font-size: 1rem;
+}
+
+header nav ul li a:hover {
+  padding: 1rem;
+  border-bottom: 4px solid var(--accent-color);
+}
+
+header nav ul li a:focus {
+  padding: 1rem;
+  border-bottom: 4px solid var(--accent-color);
+}
+
+#showcase {
+  min-height: 80vh;
+  color: var(--accent-color);
   text-align: center;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+#showcase h1 {
+  font-size: 3rem;
+  margin-top: 0;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+#showcase p {
+  font-size: 1.5rem;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+.image{
+  min-height: 80vh;
+  width: 100%;
+  position: relative;
+  background: url('https://images.unsplash.com/photo-1684395882817-030e24c0322a?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NHx8YmxhY2slMjBhbmQlMjBnb2xkJTIwa2V5Ym9hcmR8ZW58MHwwfDB8fHwy');
+  background-size: cover;
+  filter: blur(3px);
 }
 
-.App-link {
-  color: #61dafb;
+.text{
+  position: absolute;
+  text-shadow: 3px 5px 6px #efce6387;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+#main {
+  min-height: 60vh;
+  padding: 20px;
+}
+
+.info {
+  padding: 20px;
+  font-size: 1.2rem;
+  position: relative;
+}
+
+.info h2 {
+  font-size: 1.7rem;
+  color: var(--heading-color);
+}
+
+.info h3 {
+  font-size: 1.4rem;
+  color: var(--text-color);
+}
+
+.info a {
+  text-decoration: none;
+  color: var(--text-color);
+}
+
+.skills p {
+  width: max-content;
+  padding: 1rem;
+  margin: 0 7px;
+  border-radius: 25px;
+  background-color: var(--accent-color);
+}
+
+footer {
+  background: var(--text-color); 
+  color: var(--accent-color);
+  text-align: center;
+  margin-top: 30px;
+}
+.icon {
+  color: var(--accent-color);
 }

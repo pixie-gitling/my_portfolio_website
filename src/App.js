@@ -1,20 +1,36 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import './App.css';
-import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faUser, faBriefcase, faProjectDiagram, faGraduationCap, faTools, faEnvelope } from '@fortawesome/free-solid-svg-icons';
+import { BrowserRouter as Router, Route, Routes, useLocation } from 'react-router-dom';
 import NavBar from './Navbar';
 import Showcase from './Showcase';
 import Summary from './Summary';
-// Import other components
+import Experience from './Experience';
+import Projects from './Projects';
+import Education from './Education';
+import Skills from './Skills';
+import Contact from './Contact';
+
+const ScrollToTop = () => {
+  const { pathname } = useLocation();
+
+  useEffect(() => {
+    const mainElement = document.getElementById('main');
+    if (mainElement) {
+      mainElement.scrollIntoView({ behavior: 'smooth' });
+    }
+  }, [pathname]);
+
+  return null;
+};
 
 function App() {
   return (
     <Router>
       <div className="App">
+        <ScrollToTop />
         <header>
           <div className="container">
-            <div id="branding">
+            <div id="branding" className="flex">
               <h1>Kirandeep</h1>
               <p>Web Developer</p>
             </div>
@@ -25,10 +41,14 @@ function App() {
         <Showcase />
 
         <section id="main" className="container">
-          <Switch>
-            <Route path="/summary" component={Summary} />
-            {/* Add routes for other sections */}
-          </Switch>
+          <Routes>
+            <Route path="/summary" element={<Summary />} />
+            <Route path="/experience" element={<Experience />} />
+            <Route path="/projects" element={<Projects />} />
+            <Route path="/education" element={<Education />} />
+            <Route path="/skills" element={<Skills />} />
+            <Route path="/contact" element={<Contact />} />
+          </Routes>
         </section>
 
         <footer>
