@@ -6,9 +6,6 @@ body {
   color: var(--text-color);
 }
 
-/*<uniquifier>: Use a unique and descriptive class name
-  <weight>: Use a value from 400 to 900*/
-
 .playfair-display-App {
   font-family: "Playfair Display", serif;
   font-optical-sizing: auto;
@@ -48,35 +45,40 @@ header {
 header #branding {
   float: left;
   /* background: #004080; Darker blue */
-  padding: 10px;
+  padding: 1rem;
 }
 
 header #branding h1 {
   margin: 0 10px;
   font-size: 2rem;
   color: var(--hover-color);
-  text-shadow: 1px 4px 4px #07070763;;
+  text-shadow: 1px 4px 4px #07070763;
 }
 
 header #branding p {
-  margin: 0 2px;
+  /* margin: 0 2px; */
   font-size: 1.2rem;
   color: var(--text-color);
-  /* text-shadow: 1px 4px 4px #07070763;; */
 }
 
 header nav {
+  margin: 5px 0;
   float: right;
 }
 
 header nav ul {
   padding: 0;
   list-style: none;
+  display: flex;
+  justify-content: space-around;
+  position: relative;
+  border-bottom: 4px solid transparent;
 }
 
 header nav ul li {
   float: left;
-  padding: 0 15px;
+  padding: 1rem;
+  /* position: relative; */
 }
 
 header nav ul li a {
@@ -85,16 +87,33 @@ header nav ul li a {
   text-transform: uppercase;
   text-shadow: 1px 4px 4px #ffffff63;
   font-size: 1rem;
-  
-  &:hover {
-    padding: 1rem;
-    border-bottom: 4px solid var(--hover-color);
-  }
+  display: block;
+  position: relative;
+  /* padding: 1rem; */
 }
 
-header nav ul li a:focus {
-  padding: 1rem;
-  border-bottom: 4px solid var(--hover-color);
+header nav ul li a::after {
+  content: '';
+  display: block;
+  position: absolute;
+  bottom: -40px;
+  left: 50%;
+  width: 0;
+  height: 5px;
+  background: var(--hover-color);
+  transition: all 0.4s ease-in-out;
+}
+
+/* Hover effect for non-active links */
+header nav ul li:hover a::after {
+  left: 0;
+  width: 100%;
+}
+
+/* Active state */
+header nav ul li.active a::after {
+  left: 0;
+  width: 100%;
 }
 
 #showcase {
@@ -120,8 +139,7 @@ header nav ul li a:focus {
 
 .text {
   text-shadow: 3px 5px 6px #979797;
-  max-width: 600px;
-  margin-left: 20px;
+  min-width: 50vw;
 }
 
 
@@ -137,11 +155,11 @@ header nav ul li a:focus {
 
 #main {
   min-height: 60vh;
-  padding: 20px;
+  padding: 1rem;
 }
 
 .info {
-  padding: 20px;
+  padding: 1rem;
   font-size: 1.2rem;
   position: relative;
 }
@@ -176,5 +194,6 @@ footer {
   margin-top: 30px;
 }
 .icon {
+  margin-right: 5px;
   color: var(--hover-color);
 }

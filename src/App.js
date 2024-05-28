@@ -10,24 +10,24 @@ import Education from './Education';
 import Skills from './Skills';
 import Contact from './Contact';
 
-const ScrollToTop = () => {
-  const { pathname } = useLocation();
+// const ScrollToTop = () => {
+//   const { pathname } = useLocation();
 
-  useEffect(() => {
-    const mainElement = document.getElementById('main');
-    if (mainElement) {
-      mainElement.scrollIntoView({ behavior: 'smooth' });
-    }
-  }, [pathname]);
+//   useEffect(() => {
+//     const mainElement = document.getElementById('main');
+//     if (mainElement) {
+//       mainElement.scrollIntoView({ behavior: 'smooth' });
+//     }
+//   }, [pathname]);
 
-  return null;
-};
+//   return null;
+// };
 
 function App() {
   return (
     <Router>
       <div className="App playfair-display-App">
-        <ScrollToTop />
+        {/* <ScrollToTop /> */}
         <header className='flex'>
           <div className="container">
             <div id="branding" className="flex">
@@ -43,7 +43,6 @@ function App() {
         <section id="main" className="container">
           <Routes>
             <Route path="/" element={<Summary />} />
-            <Route path="/summary" element={<Summary />} />
             <Route path="/experience" element={<Experience />} />
             <Route path="/projects" element={<Projects />} />
             <Route path="/education" element={<Education />} />
