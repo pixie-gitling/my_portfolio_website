@@ -28,7 +28,7 @@ function App() {
     <Router>
       <div className="App playfair-display-App">
         <ScrollToTop />
-        <header>
+        <header className='flex'>
           <div className="container">
             <div id="branding" className="flex">
               <h1>Kirandeep</h1>
@@ -42,6 +42,7 @@ function App() {
 
         <section id="main" className="container">
           <Routes>
+            <Route path="/" element={<Summary />} />
             <Route path="/summary" element={<Summary />} />
             <Route path="/experience" element={<Experience />} />
             <Route path="/projects" element={<Projects />} />

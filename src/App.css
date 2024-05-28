@@ -2,8 +2,8 @@ body {
   line-height: 1;
   margin: 0;
   padding: 0;
-  background-color: #FFFFF0; 
-  color: #333;
+  background-color: var(--background-color); 
+  color: var(--text-color);
 }
 
 /*<uniquifier>: Use a unique and descriptive class name
@@ -17,13 +17,13 @@ body {
 }
 
 :root {
-  --heading-color: #0D0D0D;
-  --background-color: #FFFFF0;
-  --text-color: #333333;
-  --accent-color: #D4AF37;
-  --accent-color1: #50C878;
-  --accent-color2: #6A5ACD;
-  --accent-color3: #800020;
+  --primary-color: #c0c0c0;
+  --secondary-color: #8c8c8c;
+  --background-color: #ffffff;
+  --accent-color: #a9d2c5;
+  --hover-color: #2c3e50;
+  --button-color: #c0c0c0;
+  --text-color: #2f2f2f;
 }
 
 .flex{
@@ -39,9 +39,8 @@ body {
 }
 
 header {
-  background: var(--text-color);
-  color: var(--background-color);
-  min-height: 70px;
+  background: var(--primary-color);
+  min-height: 10vh;
   box-shadow: 1px 4px 4px #07070763;
   position: relative;
 }
@@ -50,25 +49,24 @@ header #branding {
   float: left;
   /* background: #004080; Darker blue */
   padding: 10px;
-  color: #fff;
 }
 
 header #branding h1 {
   margin: 0 10px;
   font-size: 2rem;
+  color: var(--hover-color);
   text-shadow: 1px 4px 4px #07070763;;
 }
 
 header #branding p {
   margin: 0 2px;
   font-size: 1.2rem;
-  color: var(--accent-color);
+  color: var(--text-color);
   /* text-shadow: 1px 4px 4px #07070763;; */
 }
 
 header nav {
   float: right;
-  margin-top: 10px;
 }
 
 header nav ul {
@@ -82,28 +80,50 @@ header nav ul li {
 }
 
 header nav ul li a {
-  color: var(--background-color);
+  color: var(--text-color);
   text-decoration: none;
   text-transform: uppercase;
   text-shadow: 1px 4px 4px #ffffff63;
   font-size: 1rem;
-}
-
-header nav ul li a:hover {
-  padding: 1rem;
-  border-bottom: 4px solid var(--accent-color);
+  
+  &:hover {
+    padding: 1rem;
+    border-bottom: 4px solid var(--hover-color);
+  }
 }
 
 header nav ul li a:focus {
   padding: 1rem;
-  border-bottom: 4px solid var(--accent-color);
+  border-bottom: 4px solid var(--hover-color);
 }
 
 #showcase {
   min-height: 80vh;
-  color: var(--accent-color);
+  padding: 2rem;
+  background-color: #f2f2f2; 
+  color: var(--text-color);
   text-align: center;
 }
+
+.image{
+  padding: 1rem;
+}
+
+.profile-image {
+  border-radius: 50%;
+  border: 5px solid var(--primary-color); 
+  box-shadow: 0 0 10px var(--secondary-color); 
+  width: 450px;
+  height: 450px;
+  object-fit: cover;
+}
+
+.text {
+  text-shadow: 3px 5px 6px #979797;
+  max-width: 600px;
+  margin-left: 20px;
+}
+
 
 #showcase h1 {
   font-size: 3rem;
@@ -114,19 +134,6 @@ header nav ul li a:focus {
   font-size: 1.5rem;
 }
 
-.image{
-  min-height: 80vh;
-  width: 100%;
-  position: relative;
-  background: url('https://images.unsplash.com/photo-1684395882817-030e24c0322a?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NHx8YmxhY2slMjBhbmQlMjBnb2xkJTIwa2V5Ym9hcmR8ZW58MHwwfDB8fHwy');
-  background-size: cover;
-  filter: blur(3px);
-}
-
-.text{
-  position: absolute;
-  text-shadow: 3px 5px 6px #efce6387;
-}
 
 #main {
   min-height: 60vh;
@@ -141,7 +148,7 @@ header nav ul li a:focus {
 
 .info h2 {
   font-size: 1.7rem;
-  color: var(--heading-color);
+  color: var(--secondary-color);
 }
 
 .info h3 {
@@ -156,18 +163,18 @@ header nav ul li a:focus {
 
 .skills p {
   width: max-content;
-  padding: 1rem;
+  padding: .9rem;
   margin: 0 7px;
   border-radius: 25px;
   background-color: var(--accent-color);
 }
 
 footer {
-  background: var(--text-color); 
-  color: var(--accent-color);
+  background: var(--hover-color); 
+  color: var(--button-color);
   text-align: center;
   margin-top: 30px;
 }
 .icon {
-  color: var(--accent-color);
+  color: var(--hover-color);
 }
